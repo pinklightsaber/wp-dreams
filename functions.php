@@ -28,3 +28,19 @@ if ( version_compare( $GLOBALS['wp_version'], $theme_options['wp_min_version'], 
 	require get_template_directory() . '/functions/back-compat.php';
 	return;
 }
+
+
+function add_classes_on_li($classes, $item, $args) {
+  $classes[] = 'nav-item';
+  return $classes;
+}
+add_filter('nav_menu_css_class','add_classes_on_li',1,3);
+
+
+add_filter( 'nav_menu_link_attributes', 'dl_menu_add_class', 10, 3 );
+
+function dl_menu_add_class( $atts, $item, $args ) {
+    $class = 'nav-link'; // or something based on $item
+    $atts['class'] = $class;
+    return $atts;
+}

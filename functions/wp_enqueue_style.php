@@ -22,6 +22,10 @@ function dl_enqueue_style() {
 	wp_register_style( 'flexslider', get_theme_file_uri( '/assets/css/flexslider.css'), null, '2.7.1', 'screen' );
 	wp_register_style( 'flickity', get_theme_file_uri( '/assets/css/flickity.css'), null, '2.1.0', 'screen' );
 	wp_register_style( 'main_style', get_theme_file_uri( '/assets/css/style.css'), array('reset'), $theme_data->get( 'Version' ), 'screen' );
+	wp_register_style( 'fonts', get_theme_file_uri( '/assets/css/fonts.css'), null, '2.7.1', 'screen' );
+	wp_register_style( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', null, null, null);
+
+	wp_register_style( 'mainstyle', get_theme_file_uri( '/assets/css/main-style.css'), null, '2.7.1', 'screen' );
 
 	/* Enqueue Scripts */
 	if ( $theme_options['slider']['flexslider'] ) {
@@ -33,6 +37,8 @@ function dl_enqueue_style() {
 	}
 
 	wp_enqueue_style( 'main_style' );
+	wp_enqueue_style( 'bootstrap' );
+	wp_enqueue_style( 'mainstyle' );
 
 }
 
