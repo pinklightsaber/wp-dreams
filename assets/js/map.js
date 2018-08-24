@@ -4,39 +4,23 @@ var request;
 
 
 if(navigator.geolocation) { 
-    navigator.geolocation.getCurrentPosition(function(pos) {
-     
-      lat = pos.coords.latitude;
-      lon = pos.coords.longitude;
-      current = new google.maps.LatLng(lat, lon);
-      initMap(current);
-       },
+  navigator.geolocation.getCurrentPosition(function(pos) {
 
-    function(){
+    lat = pos.coords.latitude;
+    lon = pos.coords.longitude;
+    current = new google.maps.LatLng(lat, lon);
 
-  $("#al").show();
-  $('#cont').append('Si no has permitido la localización, recarga la página para ello');
-});
-}; 
-
-
-
-
-/*function initMap () {
-
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: current,
-    zoom: 15 
+    initMap(current);
+  }, function(){
+    $("#al").show();
+    $('#cont').append(' Si no has permitido la localización, recarga la página para ello');
+    alert('Recarga la página y activa localización');
+    // window.location.href = "http://www.disney.com"
   });
-  
+};
 
-  var service = new google.maps.places.PlacesService(map);  
-    service.nearbySearch({
-      location: current,
-      radius: radio,
-      type: [type]
-    }, callback);
-};*/
+
+
 
 $('.img-all').on('click', function(){
   type = this.id;
@@ -120,24 +104,6 @@ function crearDatos (){
             list.append('<li> <img src = ' + photos[i].getUrl({'maxWidth':400, 'maxHeight': 400})+ '> </li>');
 } 
 
-        // var photos = lugar.photos;
-        //var list = $('#img-container').append('<ul class="slides"></ul>').find('ul');
-
-        // var slider = $('#img-container');
-        // var html = '<ul class="slides">';
-
-        // lugar.photos.forEach(function(elem) {
-
-        //   html += '<li><img src="'+ elem.getUrl() + '"></li>';
-          
-        // })
-
-        // html += '</ul>';
-        // console.log(lugar.photos);
-
-        //slider.append(html + '</ul>');
-
-        
       }
       $('.flexslider').flexslider({
              animation: "slide"

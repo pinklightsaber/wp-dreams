@@ -5,6 +5,7 @@
 	 <ul class="slides">
 	    <li>
 	      <img src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/images/slide1.jpg" />
+	     
 	    </li>
 	    <li>
 	      <img src="<?php echo get_bloginfo( 'template_directory' ); ?>/assets/images/slide2.jpg" />
@@ -15,6 +16,9 @@
 	</ul>
 	
 	</div>
+	<div class="titulo">
+	<?php get_template_part('_includes/titulo') ?>
+	</div>
 </section>
 <section id="lugares">
 		<div class="container">
@@ -23,6 +27,7 @@
 			Haz click en el lugar deseado para encontrar un espectro grande de servicios para disfrutar :)</p>
 			
 </section>
+
 
 <section class="custom">
 	<div class="container">
