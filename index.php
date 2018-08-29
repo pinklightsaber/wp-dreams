@@ -1,6 +1,28 @@
 <?php get_header() ?>
+
+<div id="wrapper">
+	<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Dreams</h1>
+						<p>Buscar lugares de acuerdo al tipo.</p>
+						<p>*Es necesario permitir la ubicación</p>
+						<nav>
+							<ul>
+								
+								<li><a href="/food" ><span class="label">FOOD</span></a></li>
+								<li><a href="/shopping" ><span class="label">ENT</span></a></li>
+								<li><a href="/ent" ><span class="label">SHOP</span></a></li>
+							</ul>
+						</nav>
+					</header>
+	</div>
+</div>
 		
-<section id="main-header">
+<!-- <section id="main-header">
 	<div class="flexslider">
 	 <ul class="slides">
 	    <li>
@@ -92,4 +114,4 @@
 	</div>
 </section>
 
-<?php get_footer() ?>
+<?php get_footer() ?> -->

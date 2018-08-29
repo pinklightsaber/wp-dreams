@@ -5,7 +5,7 @@
 
 
 	
-	<section id="header" class="header-shop">
+	<section id="header_" class="header-shop">
 			<?php get_template_part('_includes/titulo') ?>
 	</section>
 

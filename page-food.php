@@ -7,7 +7,7 @@
 
 
 
-<section id="header" class="header-food">
+<section id="header_" class="header-food">
 	<?php get_template_part('_includes/titulo') ?>
 </section>
 

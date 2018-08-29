@@ -29,6 +29,7 @@ function dl_enqueue_style() {
 
 	wp_register_style( 'mainstyle', get_theme_file_uri( '/assets/css/main-style.css'), null, '2.7.1', 'screen' );
 
+	wp_register_style( 'main', get_theme_file_uri( '/assets/css/main.css'), null, '2.7.1', 'screen' );
 
 
 	/* Enqueue Scripts */
@@ -44,6 +45,8 @@ function dl_enqueue_style() {
 	wp_enqueue_style( 'bootstrap' );
 	wp_enqueue_style( 'mainstyle' );
 	wp_enqueue_style( 'font' );
+	wp_enqueue_style( 'main' );
 }
+
 
 add_action( 'wp_enqueue_scripts', 'dl_enqueue_style' );
